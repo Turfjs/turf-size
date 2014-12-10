@@ -1,5 +1,5 @@
 var size = require('./');
-var Benchmark = require('Benchmark');
+var Benchmark = require('benchmark');
 var fs = require('fs');
 
 var bbox = [0, 0, 10, 10];
