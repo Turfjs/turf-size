@@ -1,3 +1,19 @@
+/**
+ * Takes a bbox and returns a new bbox with a size expanded or contracted
+ * by a factor of X.
+ *
+ * @module turf/size
+ * @param {Array<number>} bbox
+ * @param {number} factor the ratio of the new bbox to the old one
+ * @return {Array<number>} a resized bbox
+ * @example
+ * var bbox = [0, 0, 10, 10]
+ * var resized = turf.size(bbox, 2);
+ * var features = turf.featurecollection([
+ *   turf.bboxPolygon(bbox),
+ *   turf.bboxPolygon(resized)]);
+ * //=features
+*/
 module.exports = function(bbox, factor){
   var currentXDistance = (bbox[2] - bbox[0]);
   var currentYDistance = (bbox[3] - bbox[1]);
