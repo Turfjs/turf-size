@@ -3,15 +3,16 @@
  * by a factor of X.
  *
  * @module turf/size
- * @param {Array<number>} bbox
- * @param {number} factor the ratio of the new bbox to the old one
- * @return {Array<number>} a resized bbox
+ * @param {Array<number>} bbox a bounding box
+ * @param {number} factor the ratio of the new bbox to the input bbox
+ * @return {Array<number>} the resized bbox
  * @example
  * var bbox = [0, 0, 10, 10]
  * var resized = turf.size(bbox, 2);
  * var features = turf.featurecollection([
  *   turf.bboxPolygon(bbox),
  *   turf.bboxPolygon(resized)]);
+ *
  * //=features
 */
 module.exports = function(bbox, factor){
