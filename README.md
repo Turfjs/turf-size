@@ -1,34 +1,47 @@
-turf-size
-=========
-[![Build Status](https://travis-ci.org/Turfjs/turf-size.svg)](https://travis-ci.org/Turfjs/turf-size)
+# turf-size
 
-Takes a bbox and returns a new bbox with a size expanded or contracted by a factor of X.
+[![build status](https://secure.travis-ci.org/Turfjs/turf-size.png)](http://travis-ci.org/Turfjs/turf-size)
 
-###Install
+turf size module
 
-```sh
-npm install turf-size
-```
 
-###Parameters
+### `turf.size(bbox, factor)`
 
-|name|description|
-|---|---|
-|bbox|[xmin, ymin, xmay, ymax]|
-|factor|the factor to increase or decrease size by|
+Takes a bbox and returns a new bbox with a size expanded or contracted
+by a factor of X.
 
-###Usage
 
-```js
-size(bbox, factor)
-```
+### Parameters
 
-###Example
+| parameter | type           | description                                 |
+| --------- | -------------- | ------------------------------------------- |
+| `bbox`    | Array.<number> | a bounding box                              |
+| `factor`  | number         | the ratio of the new bbox to the input bbox |
+
+
+### Example
 
 ```js
 var bbox = [0, 0, 10, 10]
+var resized = turf.size(bbox, 2);
+var features = turf.featurecollection([
+  turf.bboxPolygon(bbox),
+  turf.bboxPolygon(resized)]);
 
-var doubled = size(bbox, 2)
-
-console.log(doubled) // [-10, -10, 20, 20]
+//=features
 ```
+
+## Installation
+
+Requires [nodejs](http://nodejs.org/).
+
+```sh
+$ npm install turf-size
+```
+
+## Tests
+
+```sh
+$ npm test
+```
+

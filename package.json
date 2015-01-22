@@ -4,11 +4,12 @@
   "description": "turf size module",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "doc": "dox -r < index.js | doxme --readme > README.md"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/morganherlocker/turf-size.git"
+    "url": "https://github.com/Turfjs/turf-size.git"
   },
   "keywords": [
     "turf",
@@ -20,11 +21,13 @@
   "author": "morganherlocker",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/morganherlocker/turf-size/issues"
+    "url": "https://github.com/Turfjs/turf-size/issues"
   },
-  "homepage": "https://github.com/morganherlocker/turf-size",
+  "homepage": "https://github.com/Turfjs/turf-size",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "tape": "^3.0.3"
+    "tape": "^3.0.3",
+    "dox": "^0.6.1",
+    "doxme": "^1.4.2"
   }
 }
