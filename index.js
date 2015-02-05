@@ -12,9 +12,13 @@
  *
  * var resized = turf.size(bbox, 2);
  *
- * var features = turf.featurecollection([
- *   turf.bboxPolygon(bbox),
- *   turf.bboxPolygon(resized)]);
+ * var features = {
+ *   "type": "FeatureCollection",
+ *   "features": [
+ *     turf.bboxPolygon(bbox),
+ *     turf.bboxPolygon(resized)
+ *   ]
+ * };
  *
  * //=features
  */
