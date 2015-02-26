@@ -5,7 +5,7 @@
  * @module turf/size
  * @category measurement
  * @param {Array<number>} bbox a bounding box
- * @param {number} factor the ratio of the new bbox to the input bbox
+ * @param {Number} factor the ratio of the new bbox to the input bbox
  * @return {Array<number>} the resized bbox
  * @example
  * var bbox = [0, 0, 10, 10]
