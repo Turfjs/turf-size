@@ -7,29 +7,38 @@ turf size module
 
 ### `turf.size(bbox, factor)`
 
-Takes a bbox and returns a new bbox with a size expanded or contracted
+Takes a bounding box and returns a new bounding box with a size expanded or contracted
 by a factor of X.
 
 
 ### Parameters
 
-| parameter | type           | description                                 |
-| --------- | -------------- | ------------------------------------------- |
-| `bbox`    | Array.<number> | a bounding box                              |
-| `factor`  | number         | the ratio of the new bbox to the input bbox |
+| parameter | type              | description                                 |
+| --------- | ----------------- | ------------------------------------------- |
+| `bbox`    | Array\.\<number\> | a bounding box                              |
+| `factor`  | Number            | the ratio of the new bbox to the input bbox |
 
 
 ### Example
 
 ```js
 var bbox = [0, 0, 10, 10]
+
 var resized = turf.size(bbox, 2);
-var features = turf.featurecollection([
-  turf.bboxPolygon(bbox),
-  turf.bboxPolygon(resized)]);
+
+var features = {
+  "type": "FeatureCollection",
+  "features": [
+    turf.bboxPolygon(bbox),
+    turf.bboxPolygon(resized)
+  ]
+};
 
 //=features
 ```
+
+
+**Returns** `Array.<number>`, the resized bbox
 
 ## Installation
 
@@ -44,4 +53,5 @@ $ npm install turf-size
 ```sh
 $ npm test
 ```
+
 
