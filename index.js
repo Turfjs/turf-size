@@ -22,7 +22,7 @@
  *
  * //=features
  */
-module.exports = function(bbox, factor){
+module.exports = function(bbox, factor) {
   var currentXDistance = (bbox[2] - bbox[0]);
   var currentYDistance = (bbox[3] - bbox[1]);
   var newXDistance = currentXDistance * factor;
@@ -37,4 +37,4 @@ module.exports = function(bbox, factor){
 
   var sized = [lowX, lowY, highX, highY];
   return sized;
-}
+};
